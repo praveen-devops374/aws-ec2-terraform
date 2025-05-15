@@ -48,3 +48,26 @@ This project provisions an EC2 instance on AWS using Terraform. It demonstrates 
 terraform init
 terraform plan
 terraform apply
+
+
+## 📸 Screenshots
+
+### ✅ Terraform Apply Output
+Shows successful provisioning of EC2 with instance ID and public IP.
+
+![Terraform Apply](./screenshots/terraform-apply-output.png)
+
+---
+
+### ✅ AWS EC2 Console
+Confirms the instance is up and running in AWS.
+
+![EC2 Console](./screenshots/ec2-console.png)
+
+---
+
+### ✅ SSH Access
+Proves secure connection using `.pem` key.
+
+![SSH Login](./screenshots/ssh-login.png)
+
