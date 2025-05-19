@@ -71,3 +71,13 @@ Proves secure connection using `.pem` key.
 
 ![SSH Login](./screenshots/ssh-login.png)
 
+### ✅ NGINX in Browser
+
+These screenshots show the NGINX welcome page running on the EC2 instance.
+
+#### 🌐 Screenshot 1: NGINX Server Window  
+![NGINX Server](./screenshots/nginx-output.png)
+
+#### 🌐 Screenshot 2: NGINX Successful in Browser  
+![NGINX Successful](./screenshots/nginx-successful.png)
+
