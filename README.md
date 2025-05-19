@@ -6,9 +6,10 @@ This project provisions an EC2 instance on AWS using Terraform. It demonstrates 
 
 ## 🚀 What This Project Does
 
-- Creates a t2.micro EC2 instance in AWS (Free Tier eligible)
+- Creates a `t2.micro` EC2 instance in AWS (Free Tier eligible)
 - Uses a key pair (`praveen-key.pem`) for secure SSH access
 - Outputs instance ID and public IP after creation
+- Installs and runs NGINX web server on EC2
 - Keeps infrastructure modular using variables and outputs
 
 ---
@@ -24,21 +25,21 @@ This project provisions an EC2 instance on AWS using Terraform. It demonstrates 
 
 ## ⚙️ Configuration Details
 
-- **Region:** us-east-1 (N. Virginia)
+- **Region:** `us-east-1` (N. Virginia)
 - **AMI ID:** `ami-0c101f26f147fa7fd` (Amazon Linux 2 AMI)
 - **Instance Type:** `t2.micro`
-- **Key Pair Name:** `praveen-key` (generated from AWS Console)
+- **Key Pair Name:** `praveen-key` (created in AWS)
 
 ---
 
 ## 📁 Project Files
 
-| File         | Purpose                                 |
-|--------------|------------------------------------------|
-| `main.tf`    | Defines EC2 instance and provider config |
-| `variables.tf` | Stores region, AMI ID, instance type, and key name |
-| `outputs.tf` | Outputs instance ID and public IP        |
-| `.gitignore` | Excludes `.pem`, `.tfstate`, and `.terraform/` directories from GitHub |
+| File            | Purpose                                          |
+|------------------|--------------------------------------------------|
+| `main.tf`        | Defines EC2 instance and provider configuration |
+| `variables.tf`   | Stores region, AMI ID, instance type, key name  |
+| `outputs.tf`     | Displays instance ID and public IP              |
+| `.gitignore`     | Excludes `.pem`, `.tfstate`, `.terraform/`      |
 
 ---
 
@@ -48,36 +49,3 @@ This project provisions an EC2 instance on AWS using Terraform. It demonstrates 
 terraform init
 terraform plan
 terraform apply
-
-
-## 📸 Screenshots
-
-### ✅ Terraform Apply Output
-Shows successful provisioning of EC2 with instance ID and public IP.
-
-![Terraform Apply](./screenshots/terraform-apply-output.png)
-
----
-
-### ✅ AWS EC2 Console
-Confirms the instance is up and running in AWS.
-
-![EC2 Console](./screenshots/ec2-console.png)
-
----
-
-### ✅ SSH Access
-Proves secure connection using `.pem` key.
-
-![SSH Login](./screenshots/ssh-login.png)
-
-### ✅ NGINX in Browser
-
-These screenshots show the NGINX welcome page running on the EC2 instance.
-
-#### 🌐 Screenshot 1: NGINX Server Window  
-![NGINX Server](./screenshots/nginx-output.png)
-
-#### 🌐 Screenshot 2: NGINX Successful in Browser  
-![NGINX Successful](./screenshots/nginx-successful.png)
-
